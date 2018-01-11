@@ -96,4 +96,3 @@ def winner(board)
   end
   return
 end
-    
