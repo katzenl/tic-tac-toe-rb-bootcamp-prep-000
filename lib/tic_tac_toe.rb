@@ -32,5 +32,6 @@ end
 def valid_move(board, position)
   if position < 9 && position > -1
     return !position_taken?(board, position)
+  end
   false
 end
