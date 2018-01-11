@@ -63,3 +63,17 @@ def current_player(board)
   end
   "O"
 end
+
+def won?(board)
+  WIN_COMBINATIONS.each do |combination|
+    position1 = board[combination[0]]
+    position2 = board[combination[1]]
+    position3 = board[combination[2]]
+    if position1 == position2
+      if position2 == position3
+        return true
+      end
+    end
+  end
+  false
+end
