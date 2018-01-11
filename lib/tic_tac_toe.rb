@@ -18,5 +18,13 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  int = input.to_i
+  int = input.to_i - 1
+end
+
+def move(board, position, player = "X")
+  board[position] = player
+end
+
+def position_taken?(board, position)
+  board[position] == "X" || board[position] == "O"
 end
