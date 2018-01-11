@@ -39,7 +39,7 @@ end
 def turn(board)
   while true
       puts "Your move: "
-      position = gets.strip.input_to_index
+      position = input_to_index(gets.strip)
       if valid_move?(board, position)
         move(board, position, "X")
         return
