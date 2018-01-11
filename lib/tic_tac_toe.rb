@@ -46,3 +46,13 @@ def turn(board)
       end
   end
 end
+
+def turn_count(board)
+  count = 0
+  for position in 0..8
+    if position_taken?(board, position)
+      count += 1
+    end
+  end
+  count
+end
