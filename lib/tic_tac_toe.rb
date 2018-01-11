@@ -70,10 +70,14 @@ def won?(board)
     position2 = board[combination[1]]
     position3 = board[combination[2]]
     if position1 == position2
-      if position2 == position3
+      if position2 == position3 && position1 != ""
         return true
       end
     end
   end
   false
+end
+
+def full?(board)
+  turn_count(board) == 9
 end
