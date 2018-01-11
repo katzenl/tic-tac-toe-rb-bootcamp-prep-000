@@ -65,17 +65,7 @@ def current_player(board)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.each do |combination|
-    position1 = board[combination[0]]
-    position2 = board[combination[1]]
-    position3 = board[combination[2]]
-    if position1 == position2
-      if position2 == position3 && position1 != ""
-        return true
-      end
-    end
-  end
-  false
+  winner(board) != nil
 end
 
 def full?(board)
@@ -88,3 +78,22 @@ def draw?(board)
   end
   full?(board)
 end
+
+def over?(board)
+  won?(board) || draw(board) || full?(board)
+end
+
+def winner(board)
+  WIN_COMBINATIONS.each do |combination|
+    position1 = board[combination[0]]
+    position2 = board[combination[1]]
+    position3 = board[combination[2]]
+    if position1 == position2
+      if position2 == position3 && position1 != ""
+        return position1
+      end
+    end
+  end
+  return
+end
+    
