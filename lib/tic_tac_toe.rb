@@ -89,7 +89,7 @@ def winner(board)
     position2 = board[combination[1]]
     position3 = board[combination[2]]
     if position1 == position2
-      if position2 == position3 && position1 != ""
+      if position2 == position3 && position1 != " "
         return position1
       end
     end
