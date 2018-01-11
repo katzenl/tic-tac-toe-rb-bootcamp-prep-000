@@ -94,5 +94,5 @@ def winner(board)
       end
     end
   end
-  return
+  return nil
 end
