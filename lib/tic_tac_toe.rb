@@ -18,5 +18,5 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  int = input.integer
+  int = input.to_i
 end
