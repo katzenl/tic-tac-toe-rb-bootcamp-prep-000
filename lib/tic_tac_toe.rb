@@ -41,7 +41,7 @@ def turn(board)
       puts "Your move: "
       position = input_to_index(gets.strip)
       if valid_move?(board, position)
-        move(board, position, "X")
+        move(board, position, current_player(board))
         return
       end
   end
@@ -95,4 +95,10 @@ def winner(board)
     end
   end
   return nil
+end
+
+def play(board)
+  while !over?(board)
+    turn(board)
+  end
 end
