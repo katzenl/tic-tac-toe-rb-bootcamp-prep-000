@@ -101,4 +101,9 @@ def play(board)
   while !over?(board)
     turn(board)
   end
+  win_player = winner(board)
+  if win_player == nil
+    puts "Cat\'s Game!"
+  else
+    puts "Congratulations #{win_player}!"
 end
