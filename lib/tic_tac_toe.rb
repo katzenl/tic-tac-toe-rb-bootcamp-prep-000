@@ -35,3 +35,14 @@ def valid_move?(board, position)
   end
   false
 end
+
+def turn(board)
+  while true
+      puts "Your move: "
+      position = gets.strip.input_to_index
+      if valid_move?(board, position)
+        move(board, position, "X")
+        return
+      end
+  end
+end
